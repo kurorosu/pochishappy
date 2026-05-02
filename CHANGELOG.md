@@ -12,12 +12,6 @@
 - GitHub Issue テンプレート (bug, feature, docs, refactor, test) と PR テンプレートを追加 (NA.)
 - CHANGELOG.md と changelogs/ アーカイブディレクトリを初期化 (NA.)
 
-## [0.1.0] - 2026-05-02
-
-### Added
-
-- 初回リリース
-
 ## 過去の変更履歴
 
 古いバージョンの履歴は [`changelogs/`](changelogs/) ディレクトリにアーカイブされています。
