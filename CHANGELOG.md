@@ -14,7 +14,8 @@
 - pre-commit / uv を導入し Python 3.14 環境を構築 ([#2](https://github.com/kurorosu/pochishappy/pull/2))
 - pochishappy パッケージのスケルトンと最小テストを追加 ([#2](https://github.com/kurorosu/pochishappy/pull/2))
 - Codex 向け AGENTS.md をローカル専用ファイルとして ignore 対象に追加 ([#3](https://github.com/kurorosu/pochishappy/pull/3))
-- `pochi` CLI の骨格実装, SHAP 実行パイプライン雛形, pochitrain 互換 logger, CLI テストを追加 (NA.)
+- `pochi` CLI の骨格実装, SHAP 実行パイプライン雛形, pochitrain 互換 logger, CLI テストを追加 ([#4](https://github.com/kurorosu/pochishappy/pull/4))
+- `.codex` ディレクトリを `.gitignore` に追加し, ローカル設定を追跡対象外に変更 (NA.)
 
 ## 過去の変更履歴
 

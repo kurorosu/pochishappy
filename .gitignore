@@ -207,6 +207,7 @@ marimo/_lsp/
 __marimo__/
 
 .claude
+.codex
 CLAUDE.md
 AGENTS.md
 *tmp*.*
