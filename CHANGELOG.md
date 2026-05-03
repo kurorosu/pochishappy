@@ -11,8 +11,9 @@
 
 - GitHub Issue テンプレート (bug, feature, docs, refactor, test) と PR テンプレートを追加 ([#1](https://github.com/kurorosu/pochishappy/pull/1))
 - CHANGELOG.md と changelogs/ アーカイブディレクトリを初期化 ([#1](https://github.com/kurorosu/pochishappy/pull/1))
-- pre-commit / uv を導入し Python 3.14 環境を構築 (NA.)
-- pochishappy パッケージのスケルトンと最小テストを追加 (NA.)
+- pre-commit / uv を導入し Python 3.14 環境を構築 ([#2](https://github.com/kurorosu/pochishappy/pull/2))
+- pochishappy パッケージのスケルトンと最小テストを追加 ([#2](https://github.com/kurorosu/pochishappy/pull/2))
+- Codex 向け AGENTS.md をローカル専用ファイルとして ignore 対象に追加 (NA.)
 
 ## 過去の変更履歴
 
