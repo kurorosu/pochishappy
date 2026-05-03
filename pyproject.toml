@@ -13,6 +13,9 @@ dependencies = [
     "numba>=0.65",
 ]
 
+[project.scripts]
+pochi = "pochishappy.cli:main"
+
 [tool.uv]
 package = true
 
