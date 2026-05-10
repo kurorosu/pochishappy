@@ -39,7 +39,7 @@ def _run(args: Namespace) -> int:
     Returns:
         正常終了時の終了コード `0`.
     """
-    request = ExplainRequest(
+    request = ExplainRequest(  # type: ignore[call-arg]
         model_path=Path(args.model),
         data_dir=Path(args.data),
         output_dir=Path(args.output),
