@@ -1,0 +1,11 @@
+{
+  "model": "./model.pth",
+  "arch": "resnet18",
+  "background_dir": "./background",
+  "mean": [0.485, 0.456, 0.406],
+  "std": [0.229, 0.224, 0.225],
+  "input_size": 224,
+  "resize": 256,
+  "topk": 1,
+  "nsamples": 20
+}
