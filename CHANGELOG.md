@@ -17,6 +17,18 @@
 - `pochi` CLI を実モデルで動作可能にする SHAP 実行ロジック (`GradientExplainer`, `shap.image_plot`) を実装. 学習プロジェクト固有のパラメータを JSON config で受け取る `pochishappy.config` モジュールを追加し, torch / torchvision (CUDA 13.0) / matplotlib を依存に追加. pytest slow marker で SHAP 計算テストを既定除外. ([#6](https://github.com/kurorosu/pochishappy/pull/6))
 - `configs/example.json` に ImageNet 既定値の動作するサンプル config を同梱. README にコピー → 書き換えのフローと, `input_size` / `resize` の関係 (torchvision `Resize` の挙動差) を追記. (NA.)
 
+### Changed
+
+- 無し
+
+### Fixed
+
+- 無し
+
+### Removed
+
+- 無し
+
 ## 過去の変更履歴
 
 古いバージョンの履歴は [`changelogs/`](changelogs/) ディレクトリにアーカイブされています。
