@@ -106,6 +106,24 @@ torchvision の `transforms.Resize` は引数の型で挙動が変わります.
 - 入力パス欠落, 値域エラー, config 不正は終了コード `2` で終了する
 - それ以外の実行時エラー (モデル読み込み失敗など) は終了コード `1` で終了する
 
+## 推奨ディレクトリ構成
+
+利用者プロジェクトでは以下の構成を推奨します. リポジトリには `examples/data/` と `examples/background/` を空ディレクトリ ([`examples/data/.gitkeep`](examples/data/.gitkeep), [`examples/background/.gitkeep`](examples/background/.gitkeep)) として同梱しているので, 利用者は配下に画像を置くだけで `pochi` を実行できます.
+
+```
+your-project/
+├── config.json           # configs/example.json をコピーして書き換え
+├── model.pth             # pochitrain の学習結果
+├── examples/
+│   ├── data/             # SHAP で説明したい val 画像 (.jpg/.png/...)
+│   └── background/       # 学習データから抽出した参照画像 50 枚程度
+└── out/                  # pochi が生成 (predictions.csv, images/)
+```
+
+- `examples/data/` — `--data` に渡す val 画像の置き場. サブディレクトリも再帰探索されます.
+- `examples/background/` — `config.json` の `background_dir` (または `--background-dir`) に渡す参照画像群. SHAP の reference 分布になるため, 学習データから代表サンプルを 50 枚程度抽出して配置します.
+- `.gitkeep` は Git の空フォルダ管理のためだけのファイルで, 実画像は同梱していません. 利用者が自分で配置してください.
+
 ## 実行例
 
 サンプル config として [`configs/example.json`](configs/example.json) を同梱しています.
@@ -117,7 +135,7 @@ cp configs/example.json ./config.json
 # config.json を編集後
 uv run pochi \
   --config ./config.json \
-  --data ./val_subset \
+  --data ./examples/data \
   --output ./out
 ```
 
@@ -126,7 +144,7 @@ CLI で一部だけ上書きしたい場合:
 ```bash
 uv run pochi \
   --config ./config.json \
-  --data ./val_subset \
+  --data ./examples/data \
   --output ./out \
   --topk 3 \
   --nsamples 50 \
