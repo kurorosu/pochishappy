@@ -6,6 +6,11 @@ Make your SHAP analysis happy — Pochi explains it all with a wagging tail!
 `pochishappy` は画像分類モデル向けの SHAP 可視化を生成する CLI ツールです.
 学習済みの `.pth` モデルと val 画像を入力に, `shap.GradientExplainer` で SHAP 値を計算し PNG を出力します.
 
+## チュートリアル
+
+pochitrain で学習した `.pth` を pochishappy で説明する一連の流れ (モデル準備 → 画像準備 → config 作成 → CLI 実行 → トラブルシュート) は [docs/usage.md](docs/usage.md) にまとめています.
+本 README は CLI / config / 出力の仕様書として参照してください.
+
 ## 入出力契約
 
 ### CLI
